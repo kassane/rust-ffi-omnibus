@@ -13,10 +13,7 @@ jobs:
 
       - name: Install buildtools
         run: |
-              sudo apt-get update \
-              && sudo apt-get install -y \
-              build-essential curl jq wget software-properties-common \
-              && sudo add-apt-repository -y ppa:deadsnakes/ppa \
+              sudo add-apt-repository -y ppa:deadsnakes/ppa \
               && sudo add-apt-repository -y ppa:brightbox/ruby-ng \
               && sudo add-apt-repository -y ppa:hvr/ghc \
               && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
@@ -24,8 +21,8 @@ jobs:
               --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \
               && sudo echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" \
               | sudo tee /etc/apt/sources.list.d/mono-official-stable.list \
-              && sudo apt-get update && sudo apt-get install -y ghc-8.8.1 mono-devel nodejs \
-              python3.8 ruby2.7 ruby2.7-dev && rm -rf /var/lib/apt/lists/* \
+              && sudo apt-get update && sudo apt-get install -y build-essential curl jq wget software-properties-common \
+              ghc-8.8.1 mono-devel nodejs python3.8 ruby2.7 ruby2.7-dev && rm -rf /var/lib/apt/lists/* \
               sudo gem install bundler \
               sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1 \
               && sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2 \
