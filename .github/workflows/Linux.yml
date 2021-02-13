@@ -13,7 +13,7 @@ jobs:
 
       - name: Install buildtools
         run: |
-              apt update && apt install -y build-essential curl jq wget \
+              sudo apt update && sudo apt install -y build-essential curl jq wget \
               && sudo add-apt-repository -y ppa:deadsnakes/ppa \
               && sudo add-apt-repository -y ppa:brightbox/ruby-ng \
               && sudo add-apt-repository -y ppa:hvr/ghc \
