@@ -22,7 +22,7 @@ jobs:
               && sudo echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" \
               | sudo tee /etc/apt/sources.list.d/mono-official-stable.list \
               && sudo apt-get update && sudo apt-get install -y build-essential curl jq wget software-properties-common \
-              ghc-8.8.1 mono-devel nodejs python3.8 ruby2.7 ruby2.7-dev && rm -rf /var/lib/apt/lists/* \
+              ghc-8.8.1 mono-devel nodejs python3.8 ruby2.7 ruby2.7-dev && sudo rm -rf /var/lib/apt/lists/* \
               sudo gem install bundler \
               sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1 \
               && sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2 \
