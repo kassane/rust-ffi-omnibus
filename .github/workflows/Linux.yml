@@ -47,7 +47,7 @@ jobs:
       - name: Site
         run: |
               cd site \
-              && bundle && jekyll build --destination /built-site --config _config.yml,_config.prod.yml
+              && sudo bundle && sudo jekyll build --destination /built-site --config _config.yml,_config.prod.yml
       
       - name: Deploy to GitHub Pages
         if: success()
